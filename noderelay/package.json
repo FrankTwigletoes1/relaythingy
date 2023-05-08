@@ -1,23 +1,38 @@
 {
-	"name": "volumiorelay",
-	"version": "1.0.0",
-	"description": "relay plugin for volumio uses esp8266",
-	"main": "index.js",
-	"scripts": {
-	  "start": "node index.js"
-	},
-	"keywords": [
-	  "volumio",
-	  "plugin"
-	],
-	"author": "Emil Andersen",
-	"license": "MIT",
-	"dependencies": {
-	  "request": "^2.88.2"
-	},
-	"repository": {
-	  "type": "git",
-	  "url": "https://github.com/your-username/volumio-my-plugin.git"
-	}
-  }
-  
+    "name": "plugin_name", //plugin name
+    "version": "1.0.0", //plugin version
+    "description": "This is my awesome plugin", //plugin description
+    "main": "index.js", //used by node.js
+    "scripts": { //used by node.js
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "author2000", //plugin author
+    "license": "ISC", //plugin license
+    "repository": "https://github.com/me/my_plugin", //plugin github repository
+    "volumio_info": { //all volumio specific information
+        "prettyName": "My Plugin", //plugin pretty name
+        "icon": "fa-headphones", //plugin icon to be selected on font awesome
+        "plugin_type": "music_service", //plugin category
+        "architectures": [ //plugin compatible architectures
+            "amd64",
+            "armhf",
+            "i386"
+        ],
+        "os": [ //plugin compatible operating systems
+            "buster"
+        ],
+        "has_alsa_contribution": true, //If your plugin needs to capture or modify audio data, a specific instruction is required
+        "details": "Lorem ipsum", //plugin details
+        "changelog": "Lorem ipsum", //plugin version changelog, will be appended to main changelog on publish
+    },
+    "engines": {
+        "node": ">=8", //required node.js version
+        "volumio": ">=3" //required volumio version
+    },
+    "dependencies": { //used by node.js
+        "fs-extra": "^0.28.0",
+        "kew": "^0.7.0",
+        "v-conf": "^1.4.0",
+        "nanotimer": "^0.3.15"
+    }
+}
